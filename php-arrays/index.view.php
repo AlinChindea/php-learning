@@ -20,15 +20,26 @@
       <?php endforeach; ?> -->
 
       <!-- filtering through associative arrays -->
+      <!-- ucwords() capitalizes word -->
 
-      <!-- <?php foreach ($person as $feature => $value) : ?>
-        <li><strong><?= $feature; ?></strong> <?= $value; ?></li> -->
+      <!-- <?php foreach ($task as $todo => $value) : ?>
 
-      <?php foreach ($task as $todo => $value) : ?>
+        <li><strong><?= ucwords($todo) ?>: </strong> <?= $value ?></li>
 
-        <li><strong><?= $todo ?></strong> <?= $value ?></li>
+      <?php endforeach; ?> -->
 
-      <?php endforeach; ?>
+      <li>
+        <strong>Name: </strong> <?= $task['title']; ?>
+      </li>
+      <li>
+        <strong>Due date: </strong> <?= $task['due']; ?>
+      </li>
+      <li>
+        <strong>Staff responsible: </strong> <?= $task['assigned_to']; ?>
+      </li>
+      <li>
+        <strong>Status: </strong> <?= $task['completed'] ? 'Complete' : 'Incomplete'; ?>
+      </li>
 
     </ul>
 
