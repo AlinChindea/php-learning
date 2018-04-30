@@ -1,6 +1,12 @@
 <?php
 
+require 'functions.php';
+
 $names = ['Jeff', 'John', 'Mary'];
+
+// dd($names);
+
+is_adult(15);
 
 $animals = ['tiger', 'rabbit', 'emu', 'camel', 'horse'];
 // add a new animal to the array with $animals[] = 'elephant';
