@@ -27,7 +27,8 @@ $task = [
    'title' => 'learn PHP',
    'due' => 'ASAP',
    'assigned_to' => 'Jeffrey',
-   'completed' => false
+   'completed' => true,
+   'required' => true
 ];
 
 

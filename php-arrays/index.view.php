@@ -38,7 +38,35 @@
         <strong>Staff responsible: </strong> <?= $task['assigned_to']; ?>
       </li>
       <li>
-        <strong>Status: </strong> <?= $task['completed'] ? 'Complete' : 'Incomplete'; ?>
+        <!-- with ternary syntax -->
+        <!-- <strong>Status: </strong> <?= $task['completed'] ? '&#9989' : 'Incomplete'; ?> -->
+
+        <!-- with shorthand for if/else -->
+        <strong>Status: </strong>
+        <?php if ($task['completed']) : ?>
+
+          <span class="icon">&#9989;</span>
+
+        <?php else : ?>
+
+          <span class="icon">Incomplete</span>
+
+        <?php endif; ?>
+      </li>
+      <li>
+
+        <strong>Priority level: </strong>
+
+        <?php if ($task['required']) : ?>
+
+          <span>Top priority</span>
+
+        <?php else : ?>
+
+          <span>Procrastinate at will</span>
+
+        <?php endif; ?>
+
       </li>
 
     </ul>
